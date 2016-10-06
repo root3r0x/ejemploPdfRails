@@ -1,6 +1,27 @@
 <html lang="es">
-<head><head>
+  <head>
+    <!-- Usar helpers de wicked para hojas de estilo e imagenes etc
+    ejemplo: <=% wicked_pdf_image_tag 'imagen' %> -->
+    <%= wicked_pdf_stylesheet_link_tag 'pdf' %>
+    <meta charset="utf-8" />
+  </head>
   <body>
-    <h1>Hola mundo</h1>
-  <body>
+    <h1>Lista de productos </h1>
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 200px;">Título</th>
+          <th style="width: 200px;">Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @products.each do | product | %>
+          <tr>
+            <td> <%= product.title %> </td>
+            <td> <%= product.pricing %> </td>
+          </tr>
+        <%end%>
+      </tbody>
+    </table>
+  </body>
 </html>
