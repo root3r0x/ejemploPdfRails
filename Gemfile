@@ -31,6 +31,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #  ██  ██  ██      ██    ██         ██████  ███████ ██      ██ ███████
 
 gem 'wicked_pdf'
+# Despues de rails g wicked_pdf agregamos
+gem 'wkhtmltopdf-binary'
+# gema necesaria para poder convertir html a pdf
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

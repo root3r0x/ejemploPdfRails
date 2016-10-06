@@ -5,6 +5,16 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
+    # Agregamos una forma de responder despues de usar el
+    #generador: rails g wicked_pdf
+    respond_to do |format|
+      format.html
+      format.json
+      # Pdf hace referenca al archivo que queremos generar
+      # product/reporte hace referenca al archivo .pdf.erb
+      # para dar formato al pdf
+      format.pdf {render template: 'product/reporte', pdf:Reporte}
+    end
   end
 
   # GET /products/1
