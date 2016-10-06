@@ -3,11 +3,12 @@
     <!-- Usar helpers de wicked para hojas de estilo e imagenes etc
     ejemplo: <=% wicked_pdf_image_tag 'imagen' %> -->
     <%= wicked_pdf_stylesheet_link_tag 'pdf' %>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <meta charset="utf-8" />
   </head>
   <body>
-    <h1>Lista de productos </h1>
-    <table>
+    <h1>Listado De Productos <small>(Articulos) </small></h1>
+    <table class="table">
       <thead>
         <tr>
           <th style="width: 200px;">Título</th>
