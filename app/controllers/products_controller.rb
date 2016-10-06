@@ -5,6 +5,13 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
+    '''
+     ██  ██  ██████  ██████  ███████      ██████  ██████  ██████  ███████
+    ████████ ██   ██ ██   ██ ██          ██      ██    ██ ██   ██ ██
+     ██  ██  ██████  ██   ██ █████       ██      ██    ██ ██   ██ █████
+    ████████ ██      ██   ██ ██          ██      ██    ██ ██   ██ ██
+     ██  ██  ██      ██████  ██           ██████  ██████  ██████  ███████
+    '''
     # Agregamos una forma de responder despues de usar el
     #generador: rails g wicked_pdf
     respond_to do |format|
