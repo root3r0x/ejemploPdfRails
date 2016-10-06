@@ -21,7 +21,8 @@ class ProductsController < ApplicationController
       # product/reporte hace referenca al archivo .pdf.erb
       # para dar formato al pdf
       #format.pdf {render template: 'products/reporte', pdf:Reporte}
-      format.pdf {render template: 'products/reporte', pdf:'Reporte'}
+      format.pdf {render template: 'products/reporte', pdf:'Reporte',
+         layout: 'pdf.html'}
     end
   end
 
